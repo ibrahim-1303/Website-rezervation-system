@@ -1,0 +1,128 @@
+﻿@model IEnumerable<KuaförRandevu00.Models.Hizmetler>
+
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/css/Resim.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        <a asp-action="Create">Ekle</a>
+    </p>
+    
+    
+        <table  class="table table-bordered table-striped">
+            <thead>
+                <tr>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.ResimYolu)
+                    </th>
+
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Baslik)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Hizmet)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Hizmet1)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Hizmet2)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Hizmet3)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Hizmet4)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Fiyat)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Fiyat1)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Fiyat2)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Fiyat3)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Fiyat4)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+
+                    <tr>
+                        <td>
+                            <div class="gallerycontainer">
+                                <a class="thumbnail" href="#thumb"><img src="@("~/HizmetlerResimleri/"+item.ResimYolu)" asp-append-version="true" width="100px" height="66px" border="50" /><span><img src="@("~/HizmetlerResimleri/"+item.ResimYolu)" asp-append-version="true" /><br />@*@Model*@</span></a>
+                            </div>
+
+                        </td>
+                        @*<td>
+                            @Html.DisplayFor(modelItem => item.BaslikServisler)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BaslikAciklama)
+                        </td>*@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Baslik)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Hizmet)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Hizmet1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Hizmet2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Hizmet3)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Hizmet4)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fiyat)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fiyat1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fiyat2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fiyat3)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fiyat4)
+                        </td>
+
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Değiştir</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Detay</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+</body>
+</html>

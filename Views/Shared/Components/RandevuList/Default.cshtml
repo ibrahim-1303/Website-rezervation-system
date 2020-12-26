@@ -1,0 +1,68 @@
+﻿@model IEnumerable<KuaförRandevu00.Models.Randevu>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+ 
+</head>
+<body>
+    <p>
+        <a asp-controller="Admin" asp-action="CreateRandevu">Manuel olarak ekle</a>
+    </p>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <h1>Randevular</h1>
+            <tr>
+                <th>
+                    Tarih
+                </th>
+                <th>
+                    Alınacak Hizmet/Aciklama
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Soyad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Telno)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Start)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Text)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Soyad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telno)
+                    </td>
+                    <td>
+                        <a asp-controller="Admin" asp-action="EditRandevu" asp-route-id="@item.Id">Düzenle</a> |
+                        <a asp-controller="Admin" asp-action="DeleteRandevu" asp-route-id="@item.Id">Sil</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

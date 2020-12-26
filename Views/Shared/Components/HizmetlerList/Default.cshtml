@@ -1,0 +1,121 @@
+﻿@model IEnumerable<KuaförRandevu00.Models.Hizmetler>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <div class="site-section bg-light">
+        <div class="container">
+            <div class="row justify-content-center  mb-5">
+
+                <div class="col-md-7 text-center">
+
+
+                    <p class="text-center">
+                        <a href="#" class="btn btn-primary custom-prev">Önceki</a>
+                        <a href="#" class="btn btn-primary custom-next">Sonraki</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="nonloop-block-13 owl-carousel d-flex">
+
+                        @foreach (var item in Model)
+                        {
+
+                            <div class="item-1 h">
+                                <img src="@("~/HizmetlerResimleri/"+item.ResimYolu)" alt="Image" class="img-fluid" asp-append-version="true">
+                                <div class="item-1-contents">
+                                    <h3>@item.Baslik </h3>
+                                    <ul>
+                                        <li class="d-flex"><span>@item.Hizmet</span> <span class="price ml-auto">@item.Fiyat TL</span></li>
+                                        <li class="d-flex"><span>@item.Hizmet1</span><span class="price ml-auto">@item.Fiyat1 TL</span></li>
+                                        <li class="d-flex"><span>@item.Hizmet2</span><span class="price ml-auto">@item.Fiyat2 TL</span></li>
+                                        <li class="d-flex"><span>@item.Hizmet3</span><span class="price ml-auto">@item.Fiyat3 TL</span></li>
+                                        <li class="d-flex"><span>@item.Hizmet4</span><span class="price ml-auto">@item.Fiyat4 TL</span></li>
+                                    </ul>
+                                </div>
+
+                            </div>}
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+@*<thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ResimYolu)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.BaslikServisler)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BaslikAciklama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Baslik)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hizmet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hizmet1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hizmet2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hizmet3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hizmet4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fiyat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fiyat1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fiyat2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fiyat3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fiyat4)
+            </th>
+            <th></th>
+        </tr>
+    </thead>*@

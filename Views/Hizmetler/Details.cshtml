@@ -1,0 +1,103 @@
+﻿@model KuaförRandevu00.Models.Hizmetler
+@{
+    Layout = "_LayoutAdmin";
+}
+<link href="~/css/Resim.css" rel="stylesheet" />
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+    <div>
+        <h4>Hizmetler</h4>
+        <hr />
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th scope="col"> @Html.DisplayNameFor(model => model.ResimYolu)</th>
+                <th scope="col"><a class="thumbnail" href="#thumb"><img src="@("~/HizmetlerResimleri/"+Model.ResimYolu)" asp-append-version="true" width="100px" height="66px" border="0" /><span><img src="@("~/HizmetlerResimleri/"+Model.ResimYolu)" asp-append-version="true" /><br />@*@Model*@</span></a></th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Baslik)</th>
+                <td>@Html.DisplayFor(model => model.Baslik)</td>
+
+
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Hizmet)</th>
+                <td>@Html.DisplayFor(model => model.Hizmet)</td>
+
+
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Hizmet1)</th>
+                <td colspan="2">@Html.DisplayFor(model => model.Hizmet1)</td>
+
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Hizmet2)</th>
+                <td colspan="2">@Html.DisplayFor(model => model.Hizmet2)</td>
+
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Hizmet3)</th>
+                <td colspan="2">@Html.DisplayFor(model => model.Hizmet3)</td>
+
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Hizmet4)</th>
+                <td colspan="2">@Html.DisplayFor(model => model.Hizmet4)</td>
+
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Fiyat)</th>
+                <td colspan="2">@Html.DisplayFor(model => model.Fiyat)</td>
+
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Fiyat1)</th>
+                <td colspan="2">@Html.DisplayFor(model => model.Fiyat1)</td>
+
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Fiyat2)</th>
+                <td colspan="2">@Html.DisplayFor(model => model.Fiyat2)</td>
+
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Fiyat3)</th>
+                <td colspan="2">@Html.DisplayFor(model => model.Fiyat3)</td>
+
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Fiyat4)</th>
+                <td colspan="2">@Html.DisplayFor(model => model.Fiyat4)</td>
+
+            </tr>
+            
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Değiştir</a> |
+        <a asp-action="Index">Geri Dön</a>
+    </div>
+</body>
+</html>

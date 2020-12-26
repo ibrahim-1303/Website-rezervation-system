@@ -1,0 +1,167 @@
+﻿@model KuaförRandevu00.Models.Servis
+
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<link href="~/css/Resim.css" rel="stylesheet" />
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+
+    <h3>Silmek istediğinize emin misiniz?</h3>
+
+    <h4>Servis</h4>
+    <hr />
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.LogoYazısı)</th>
+                <th scope="col">@Html.DisplayFor(modelItem => Model.LogoYazısı)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Baslik)</th>
+                <td>@Html.DisplayFor(modelItem => Model.Baslik)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Aciklama)</th>
+                <td>@Html.DisplayFor(modelItem => Model.Aciklama)</td>
+
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Baslik1)</th>
+                <td>@Html.DisplayFor(modelItem => Model.Baslik1)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Aciklama1)</th>
+                <td>@Html.DisplayFor(modelItem => Model.Aciklama1)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Baslik2)</th>
+                <td>@Html.DisplayFor(modelItem => Model.Baslik2)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Aciklama2)</th>
+                <td>@Html.DisplayFor(modelItem => Model.Aciklama2)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Baslik3)</th>
+                <td>@Html.DisplayFor(modelItem => Model.Baslik3)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Aciklama3)</th>
+                <td>@Html.DisplayFor(modelItem => Model.Aciklama3)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Baslik4)</th>
+                <td>@Html.DisplayFor(modelItem => Model.Baslik4)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Aciklama4)</th>
+                <td>@Html.DisplayFor(modelItem => Model.Aciklama4)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Baslik5)</th>
+                <td>@Html.DisplayFor(modelItem => Model.Baslik5)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Aciklama5)</th>
+                <td>@Html.DisplayFor(modelItem => Model.Aciklama5)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Baslik6)</th>
+                <td>@Html.DisplayFor(modelItem => Model.Baslik6)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Aciklama6)</th>
+                <td>@Html.DisplayFor(modelItem => Model.Aciklama6)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.ClientSaysbaslik)</th>
+                <td>@Html.DisplayFor(modelItem => Model.ClientSaysbaslik)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.ClientSaysAciklama)</th>
+                <td>@Html.DisplayFor(modelItem => Model.ClientSaysAciklama)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.ResimYolu)</th>
+                <td>
+                    <div class="gallerycontainer">
+                        <a class="thumbnail" href="#thumb"><img src="@("~/ServislerimizResimleri/"+Model.ResimYolu)" asp-append-version="true" width="100px" height="66px" border="0" /><span><img src="@("~/ServislerimizResimleri/"+Model.ResimYolu)" asp-append-version="true" /><br />@*@Model*@</span></a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Müsteriisim)</th>
+                <td>@Html.DisplayFor(modelItem => Model.Müsteriisim)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.MüsteriAciklama)</th>
+                <td>@Html.DisplayFor(modelItem => Model.MüsteriAciklama)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.ResimYolu2)</th>
+                <td>
+                    <div class="gallerycontainer">
+                        <a class="thumbnail" href="#thumb"><img src="@("~/ServislerimizResimleri/"+Model.ResimYolu2)" asp-append-version="true" width="100px" height="66px" border="0" /><span><img src="@("~/ServislerimizResimleri/"+Model.ResimYolu2)" asp-append-version="true" /><br />@*@Model*@</span></a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Müsteriisim2)</th>
+                <td>@Html.DisplayFor(modelItem => Model.Müsteriisim2)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.MüsteriAciklama2)</th>
+                <td>@Html.DisplayFor(modelItem => Model.MüsteriAciklama2)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.ResimYolu3)</th>
+                <td>
+                    <div class="gallerycontainer">
+                        <a class="thumbnail" href="#thumb"><img src="@("~/ServislerimizResimleri/"+Model.ResimYolu3)" asp-append-version="true" width="100px" height="66px" border="0" /><span><img src="@("~/ServislerimizResimleri/"+Model.ResimYolu3)" asp-append-version="true" /><br />@*@Model*@</span></a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Müsteriisim3)</th>
+                <td>@Html.DisplayFor(modelItem => Model.Müsteriisim3)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.MüsteriAciklama3)</th>
+                <td>@Html.DisplayFor(modelItem => Model.MüsteriAciklama3)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.KalitelisacBaslik)</th>
+                <td>@Html.DisplayFor(modelItem => Model.KalitelisacBaslik)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.KalitelisacAciklama)</th>
+                <td>@Html.DisplayFor(modelItem => Model.KalitelisacAciklama)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.ResimYolu1)</th>
+                <td>
+                    <div class="gallerycontainer">
+                        <a class="thumbnail" href="#thumb"><img src="@("~/ServislerimizResimleri/"+Model.ResimYolu1)" asp-append-version="true" width="100px" height="66px" border="0" /><span><img src="@("~/ServislerimizResimleri/"+Model.ResimYolu1)" asp-append-version="true" /><br />@*@Model*@</span></a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+        <a asp-action="Index">Geri Dön</a>
+    </form>
+
+</body>
+</html>
